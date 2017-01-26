@@ -1,7 +1,19 @@
 const render = (timelineData, root) => {
   let htmlString = ''
   timelineData.forEach((timelineEvent) => {
-    htmlString += `<li>[${timelineEvent.type}] ${timelineEvent.text}</li>`
+    // {
+    //   type
+    //   text
+    //   date
+    //   team
+    //   author
+    // }
+    htmlString += `<li class="${timelineEvent.type}">
+                    <div>
+                      <p class="author">${timelineEvent.author || ''}:</p>
+                      [${timelineEvent.type}] ${timelineEvent.text}
+                    </div>
+                  </li>`
   })
   root.innerHTML = htmlString
 }

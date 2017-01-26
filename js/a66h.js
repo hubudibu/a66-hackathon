@@ -1,12 +1,13 @@
 const dataSources = [
   mockDataSource,
-  slackDataSource
+  slackDataSource,
+  // githubDataSource,
 ]
 
-let flattenArrays = (arrays) =>  [].concat.apply([], arrays)
-let sortByDate = (item1, item2) => item1.date - item2.date
+let sortByDate = (item1, item2) => item2.date - item1.date
 
 Promise.all(dataSources.map(src => src.get())).then(timelineArrays => {
-  timelineItems = flattenArrays(timelineArrays).sort(sortByDate);
+  timelineItems = utils.flattenArrays(timelineArrays).sort(sortByDate);
+  console.log(timelineItems);
   render(timelineItems, document.querySelector('#timeline'))
 });

@@ -9,7 +9,7 @@ const slackDataSource = (() => {
         )
         .then(response => response.json())
         .then(responseJSON => responseJSON.values.map((row) => ({
-          date: row[0],
+          date: parseInt(row[0]),
           text: row[3],
           author: row[2],
           type: 'slack',

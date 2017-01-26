@@ -1,6 +1,7 @@
 const dataSources = [
   mockDataSource,
   slackDataSource,
+  instaDataSource,
   // githubDataSource,
 ]
 

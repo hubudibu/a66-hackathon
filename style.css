@@ -97,11 +97,11 @@ li::before {
   flex-shrink: 0;
 }
 
-li.slack::before {
+.slack::before {
   background-image: url(img/slack.png);
 }
 
-li.mock::before {
+.mock::before {
   background-image: url(img/github.jpg);
 }
 
@@ -116,4 +116,14 @@ li div {
   float: left;
   padding: 0 20px;
   word-break: break-all;
+  flex-grow: 1;
+}
+
+img, video {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.insta::before {
+  display: none;
 }

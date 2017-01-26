@@ -11,7 +11,7 @@ const render = (timelineData, root) => {
     htmlString += `<li class="${timelineEvent.type}">
                     <div>
                       <p class="author">${timelineEvent.author || ''}:</p>
-                      [${timelineEvent.type}] ${timelineEvent.text}
+                      ${timelineEvent.text}
                     </div>
                   </li>`
   })

@@ -1,5 +1,9 @@
 const render = (timelineData, root) => {
   let htmlString = ''
+  const parseTXT = (event) => event.type === "insta" ?
+                              event.text :
+                              utils.parseURLs(event.text)
+
   timelineData.forEach((timelineEvent) => {
     // {
     //   type
@@ -11,7 +15,7 @@ const render = (timelineData, root) => {
     htmlString += `<li class="${timelineEvent.type}">
                     <div>
                       <p class="author">${timelineEvent.author || ''}:</p>
-                      ${timelineEvent.text}
+                      ${parseTXT(timelineEvent)}
                     </div>
                   </li>`
   })

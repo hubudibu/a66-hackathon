@@ -56,7 +56,7 @@ const repos = [
 const githubDataSource = ((repos) => {
 
   const fetchRepo = (owner, repo) => fetch(
-    `http://a66-hackathon.herokuapp.com/repos/${owner}/${repo}/commits`,
+    `https://a66-hackathon.herokuapp.com/repos/${owner}/${repo}/commits`,
     { method: 'get' }
   )
   .then(response => response.json())

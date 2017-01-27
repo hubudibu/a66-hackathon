@@ -17,6 +17,7 @@ const render = (timelineData, root) => {
     // }
     htmlString += `<li class="${timelineEvent.type}">
                     <div>
+                      ${timelineEvent.avatar ? '<img class="avatar" src="' +  timelineEvent.avatar + '">' : ''}
                       <p class="author">${timelineEvent.author || ''} [${formattedTime}]:</p>
                       ${parseTXT(timelineEvent)}
                     </div>

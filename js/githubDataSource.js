@@ -66,6 +66,7 @@ const githubDataSource = ((repos) => {
     author: commit.author,
     type: 'github',
     team: repo,
+    avatar: commit.avatar,
   })))
 
   return {

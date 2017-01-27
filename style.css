@@ -182,3 +182,17 @@ nav img {
 .github .author {
   font-size: 10px;
 }
+
+.avatar {
+  position: absolute;
+  top: 23px;
+  left: 15px;
+  width: 45px;
+  height: 45px;
+  border: 2px solid;
+}
+
+li:nth-child(2n) .avatar {
+  left: auto;
+  right: 15px;
+}

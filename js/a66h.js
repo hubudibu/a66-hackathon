@@ -1,8 +1,8 @@
 const dataSources = [
-  mockDataSource,
+  // mockDataSource,
   slackDataSource,
   instaDataSource,
-  // githubDataSource,
+  githubDataSource,
 ]
 
 let sortByDate = (item1, item2) => item2.date - item1.date

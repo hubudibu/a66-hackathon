@@ -16,10 +16,19 @@ body {
 
 @keyframes blergh {
   from {
-    transform: rotate3d(1, 2, 0, -10deg);
+    transform: rotate3d(0, 2, 0, -10deg);
   }
   to {
-    transform: rotate3d(1, 2, 0, 20deg);
+    transform: rotate3d(0, 2, 0, 20deg);
+  }
+}
+
+@keyframes blorgh {
+  from {
+    transform: rotate3d(1, 2, 0, -20deg);
+  }
+  to {
+    transform: rotate3d(1, 2, 0, 10deg);
   }
 }
 
@@ -32,6 +41,7 @@ h1 {
   margin: 0 auto 40px;
   position: relative;
   box-shadow: -10px 10px black;
+  animation: blorgh 8s alternate infinite ease;
 }
 
 p {
@@ -104,8 +114,8 @@ li:nth-child(2n)::after {
 
 li::before {
   content: '';
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   background-size: contain;
   flex-shrink: 0;
 }
@@ -114,7 +124,8 @@ li::before {
   background-image: url(img/slack.png);
 }
 
-.mock::before {
+.mock::before,
+.github::before {
   background-image: url(img/github.jpg);
 }
 
@@ -128,8 +139,11 @@ li::before {
 li div {
   float: left;
   padding: 0 20px;
-  word-break: break-all;
   flex-grow: 1;
+}
+
+li a {
+  word-break: break-all;
 }
 
 img, video {
@@ -154,6 +168,7 @@ nav {
   margin-bottom: 40px;
   box-shadow: -10px 10px black;
   border: 2px solid;
+  animation: blorgh 15s alternate infinite ease;
 }
 nav a {
   display: inline-block;
@@ -162,4 +177,8 @@ nav a {
 }
 nav img {
   margin: 0;
+}
+
+.github .author {
+  font-size: 10px;
 }

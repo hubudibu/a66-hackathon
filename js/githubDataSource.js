@@ -4,6 +4,10 @@ const repos = [
     repo: 'a66-hackathon',
   },
   {
+    owner: 'gex',
+    repo: 'a66-hackathon-backend',
+  },
+  {
     owner: 'bednayb',
     repo: 'BednayPracserMasterTeam',
   },
@@ -43,6 +47,10 @@ const repos = [
     owner: 't2botond',
     repo: 'TrainStat',
   },
+  {
+    owner: 'greenfox-zerda-sparta',
+    repo: 'Voice_Hangman',
+  },
 ]
 
 const githubDataSource = ((repos) => {
@@ -53,7 +61,7 @@ const githubDataSource = ((repos) => {
   )
   .then(response => response.json())
   .then(responseJSON => responseJSON.map((commit) => ({
-    date: Date.parse(commit.date),
+    date: Date.parse(commit.date)/1000,
     text: commit.message,
     author: commit.author,
     type: 'github',

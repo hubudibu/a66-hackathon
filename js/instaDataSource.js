@@ -10,7 +10,9 @@ const instaDataSource = (() => {
         .then(response => response.json())
         .then(responseJSON => responseJSON.values.map((row) => ({
           date: parseInt(row[7]) || 0,
-          text: (row[6] === 'video' ? `<video src="${row[0]}" autoplay loop>` : `<img src="${row[2]}"><p>${row[3]}</p>`),//s + `<p>${row[3]}</p>`,
+          text: row[6] === 'video' ?
+                `<video src="${row[0]}" autoplay loop><p>${row[3]}</p>` :
+                `<img src="${row[2]}"><p>${row[3]}</p>`,
           author: row[4],
           type: 'insta',
           team: null,

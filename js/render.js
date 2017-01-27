@@ -3,10 +3,10 @@ const render = (timelineData, root) => {
   const parseTXT = (event) => event.type === "insta" ?
                               event.text :
                               utils.parseURLs(event.text)
+  const formatOptions = { minute: '2-digit', hour: '2-digit' }
 
   timelineData.forEach((timelineEvent) => {
     const time = new Date(timelineEvent.date*1000)
-    const formatOptions = { minute: '2-digit', hour: '2-digit' }
     const formattedTime = time.toLocaleTimeString('en-US', formatOptions)
     // {
     //   type

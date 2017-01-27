@@ -1,5 +1,9 @@
 const repos = [
   {
+    owner: 'hubudibu',
+    repo: 'a66-hackathon',
+  },
+  {
     owner: 'bednayb',
     repo: 'BednayPracserMasterTeam',
   },

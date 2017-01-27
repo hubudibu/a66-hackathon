@@ -1,13 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700|BioRhyme:300,400,700');
 
-body {
+html {
   background: #5C258D;
   background: linear-gradient(to left bottom, #5C258D, #4389A2) fixed;
   min-height: 100vh;
+}
+
+body {
   font-family: 'Space Mono', monospace;
   text-align: center;
   padding: 20px 10px;
-  transform: rotate3d();
+  transform-origin: center top;
+  animation: blergh 10s alternate infinite ease;
+}
+
+@keyframes blergh {
+  from {
+    transform: rotate3d(1, 2, 0, -10deg);
+  }
+  to {
+    transform: rotate3d(1, 2, 0, 20deg);
+  }
 }
 
 h1 {

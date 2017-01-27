@@ -48,14 +48,14 @@ const repos = [
 const githubDataSource = ((repos) => {
 
   const fetchRepo = (owner, repo) => fetch(
-    `https://api.github.com/repos/${owner}/${repo}/commits`,
+    `http://a66-hackathon.herokuapp.com/repos/${owner}/${repo}/commits`,
     { method: 'get' }
   )
   .then(response => response.json())
   .then(responseJSON => responseJSON.map((commit) => ({
-    date: Date.parse(commit.commit.committer.date),
-    text: commit.commit.message,
-    author: commit.commit.committer.name,
+    date: Date.parse(commit.date),
+    text: commit.message,
+    author: commit.author,
     type: 'github',
     team: repo,
   })))

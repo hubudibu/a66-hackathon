@@ -1,4 +1,4 @@
-const mockDate = Date.now()
+const mockDate = Date.now() / 1000
 
 const mockDataSource = (() => {
   const mockData = [

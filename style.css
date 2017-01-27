@@ -45,7 +45,7 @@ h1::before {
   right: 100%;
 }
 h1::after {
-  content: '▲▵△▻◀︎';
+  content: '▶▵△▲▻';
   position: absolute;
   left: 100%;
 }

@@ -51,6 +51,14 @@ const repos = [
     owner: 'greenfox-zerda-sparta',
     repo: 'Voice_Hangman',
   },
+  {
+    owner: 'EggDice',
+    repo: 'asana-global-view',
+  },
+  {
+    owner: 'lab-coop',
+    repo: 'labfood',
+  },
 ]
 
 const githubDataSource = ((repos) => {

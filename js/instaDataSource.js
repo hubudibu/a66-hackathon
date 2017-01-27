@@ -12,7 +12,7 @@ const instaDataSource = (() => {
           date: parseInt(row[7]) || 0,
           text: row[6] === 'video' ?
                 `<video src="${row[0]}" autoplay loop><p>${row[3]}</p>` :
-                `<img src="${row[2]}"><p>${row[3]}</p>`,
+                `<img src="${row[2]}" class="instaimg"><p>${row[3]}</p>`,
           author: row[4],
           type: 'insta',
           team: null,

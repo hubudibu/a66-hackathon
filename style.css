@@ -137,6 +137,13 @@ img, video {
   margin-bottom: 20px;
 }
 
+.thumb,
+.instaimg {
+  display: block;
+  border: 2px solid;
+  margin: 5px 0;
+}
+
 .insta::before {
   display: none;
 }
